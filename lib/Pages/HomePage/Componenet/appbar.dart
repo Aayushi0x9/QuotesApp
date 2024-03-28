@@ -1,8 +1,9 @@
 import 'package:quote_app/headers.dart';
 
 AppBar appBar({
-  required tittle,
+  required title,
   required bool isList,
+  required void Function() toggleList,
 }) {
   return AppBar(
     centerTitle: true,
@@ -18,10 +19,10 @@ AppBar appBar({
         icon: const Icon(Icons.save_alt),
       ),
       IconButton(
-        onPressed: () {},
+        onPressed: toggleList,
         icon: Icon(isList ? Icons.grid_view : Icons.view_list),
       ),
-      SizedBox(width: 5),
+      const SizedBox(width: 5),
     ],
   );
 }
