@@ -5,9 +5,12 @@ Widget QuoteGridView({required size}) {
     gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
       crossAxisCount: 2,
     ),
-    itemCount: allQuotesData.length,
+    itemCount: allQuotes.length,
     itemBuilder: (context, index) => GestureDetector(
-      onTap: () {},
+      onTap: () {
+        Navigator.pushNamed(context, MyRoutes.quotePage,
+            arguments: allQuotes[index]);
+      },
       child: Container(
         width: size.width,
         height: size.height * 0.2,

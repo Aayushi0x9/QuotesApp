@@ -32,7 +32,7 @@ class _HomePageState extends State<HomePage> {
               children: [
                 //SearchBax
                 Searchbox(),
-                SizedBox(height: size.height * 0.01),
+                // SizedBox(height: size.height * 0.01),
 
                 Row(
                   children: [
@@ -47,7 +47,7 @@ class _HomePageState extends State<HomePage> {
                           : QuoteGridView(size: size),
                     ),
                     //Categories
-                    Categories(size: size, context: context),
+                    Expanded(child: Categories(size: size, context: context)),
                   ],
                 ),
               ],

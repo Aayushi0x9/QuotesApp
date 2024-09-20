@@ -1,30 +1,31 @@
-class Quote {
+class QuoteModel {
   //Attributes
-  final String quote;
-  final String author;
-  final String category;
+  String quote, author, category;
+  int likesCount, sharesCount, commentsCount;
   int likes = 0;
   bool isLiked = false;
 
   //Parameterized constructor
-  Quote({
-    required this.quote,
-    required this.author,
-    required this.category,
-  });
+  QuoteModel(this.quote, this.author, this.category, this.commentsCount,
+      this.likesCount, this.sharesCount);
 
   //Factory constructor:  Map =>  Current Class Object
-  factory Quote.fromMap({required Map data}) => Quote(
-        quote: data['quote'],
-        author: data['author'],
-        category: data['category'],
-      );
+  factory QuoteModel.fromMap({required Map data}) => QuoteModel(
+      data['quote'],
+      data['author'],
+      data['category'],
+      data['commentsCount'],
+      data['likesCount'],
+      data['sharesCount']);
 
   // Object => Map
   Map<String, dynamic> get toMap => {
         'quote': quote,
         'author': author,
         'category': category,
+        'commentsCount': commentsCount,
+        'likesCount': likesCount,
+        'sharesCount': sharesCount,
         'likes': likes,
         'isLiked': isLiked,
       };

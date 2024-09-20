@@ -5,10 +5,11 @@ Widget quoteListView({required context, required size}) {
     child: Column(
       children: [
         ...List.generate(
-          allQuotesData.length,
+          allQuotes.length,
           (index) => GestureDetector(
             onTap: () {
-              Navigator.pushNamed(context, MyRoutes.quotePage);
+              Navigator.pushNamed(context, MyRoutes.quotePage,
+                  arguments: allQuotes[index]);
             },
             child: Card(
               color: Colors.primaries[index % 18].shade200,

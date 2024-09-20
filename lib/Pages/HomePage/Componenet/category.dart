@@ -15,14 +15,17 @@ Widget Categories({required size, required context}) {
                     top: 2,
                     bottom: 5,
                   ),
-                  height: size.height * 0.08,
-                  width: size.width * 0.18,
+                  // height: size.height * 0.08,
+                  width: size.width * 0.1,
                   decoration: BoxDecoration(
                     color: Colors
                         .primaries[allCategories.indexOf(e) % 18].shade200,
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  child: Text(e),
+                  child: Text(
+                    e,
+                    style: TextStyle(),
+                  ),
                 ),
               ),
             )
