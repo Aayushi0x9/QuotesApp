@@ -15,12 +15,6 @@ class _QuotePageState extends State<QuotePage> {
     Colors.black,
     ...Colors.primaries,
   ];
-  List<String> backgroundImages = [
-    'assets/background1.jpg', // Example asset images
-    'assets/background2.jpg',
-    'https://example.com/image1.jpg', // Example network images
-    'https://example.com/image2.jpg',
-  ];
   List img = [
     'assets/images/1.jpeg',
     'assets/images/2.jpeg',
