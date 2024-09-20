@@ -14,6 +14,20 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primaryColor: Color(0xff066782), // Dark Teal
+        hintColor: Color(0xff39d5ff), // Light Blue
+        scaffoldBackgroundColor: Colors.black, // Background color of the app
+        // textTheme: TextTheme(
+        //   bodyText1: TextStyle(color: Colors.white), // Default text color
+        //   bodyText2: TextStyle(color: Colors.white),
+        //   headline6: TextStyle(color: Colors.white), // AppBar title color
+        // ),
+        appBarTheme: AppBarTheme(
+          backgroundColor: Color(0xff066782), // AppBar color
+          iconTheme: IconThemeData(color: Colors.white), // AppBar icon color
+        ),
+      ),
       initialRoute: MyRoutes.splashScreen,
       routes: {
         MyRoutes.splashScreen: (context) => const SplashScreen(),

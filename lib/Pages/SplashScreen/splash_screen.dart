@@ -24,13 +24,15 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
+      backgroundColor: Color(0xff000000),
       body: Center(
         child: Container(
           alignment: Alignment.center,
-          height: size.height * 0.5,
-          width: size.width * 0.5,
-          child: Image.network(
-              'https://play-lh.googleusercontent.com/HREvqhtt08PQ1nKcVrhrPpTAJzEq39Mw4ed-LK9Fpj7c-OlTssO0uZeTfaZzCjAZow'),
+          height: size.height * 0.75,
+          width: size.width * 0.75,
+          decoration: const BoxDecoration(
+              image: DecorationImage(
+                  image: AssetImage('assets/images/quotify_logo.png'))),
         ),
       ),
     );

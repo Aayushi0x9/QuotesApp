@@ -1,13 +1,16 @@
+import 'package:flutter/material.dart';
 import 'package:quote_app/headers.dart';
 
-Widget Categories({required size, required context}) {
+Widget Categories({required Size size, required BuildContext context}) {
   return SingleChildScrollView(
     child: Column(
       children: [
         ...allCategories
             .map(
               (e) => GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  // Handle category tap
+                },
                 child: Container(
                   padding: const EdgeInsets.all(25),
                   margin: const EdgeInsets.only(
@@ -15,16 +18,23 @@ Widget Categories({required size, required context}) {
                     top: 2,
                     bottom: 5,
                   ),
-                  // height: size.height * 0.08,
-                  width: size.width * 0.1,
+                  width: size.width * 0.2, // Adjusted width for better layout
                   decoration: BoxDecoration(
-                    color: Colors
-                        .primaries[allCategories.indexOf(e) % 18].shade200,
                     borderRadius: BorderRadius.circular(10),
+                    gradient: LinearGradient(
+                      colors: [
+                        Color(0xff066782), // Dark Teal
+                        Color(0xff39d5ff)
+                            .withOpacity(0.3), // Light Blue with opacity
+                      ],
+                    ),
                   ),
                   child: Text(
                     e,
-                    style: TextStyle(),
+                    style: TextStyle(
+                      color: Colors.white, // Text color for contrast
+                      fontWeight: FontWeight.bold, // Make text bold
+                    ),
                   ),
                 ),
               ),
