@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
-import '../../../headers.dart';
+import 'package:quote_app/headers.dart';
+import 'package:quote_app/utils/quotes_utils.dart';
 
 Widget QuoteGridView({required Size size}) {
   return GridView.builder(
@@ -30,6 +30,8 @@ Widget QuoteGridView({required Size size}) {
           child: Text(
             '${allQuotes[index].quote}',
             textAlign: TextAlign.center,
+            overflow: TextOverflow.ellipsis,
+            maxLines: 6,
             style: TextStyle(
               color: Colors.white, // Text color for contrast
               fontSize: 16, // Optional: Adjust text size

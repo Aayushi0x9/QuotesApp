@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:quote_app/headers.dart';
+import 'package:quote_app/utils/quotes_utils.dart';
 
 Widget Categories({required Size size, required BuildContext context}) {
   return SingleChildScrollView(
@@ -12,12 +12,9 @@ Widget Categories({required Size size, required BuildContext context}) {
                   // Handle category tap
                 },
                 child: Container(
-                  padding: const EdgeInsets.all(25),
+                  padding: const EdgeInsets.all(20),
                   margin: const EdgeInsets.only(
-                    left: 5,
-                    top: 2,
-                    bottom: 5,
-                  ),
+                      left: 5, top: 2, bottom: 5, right: 5),
                   width: size.width * 0.2, // Adjusted width for better layout
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),

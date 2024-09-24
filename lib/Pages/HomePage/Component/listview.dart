@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:quote_app/headers.dart';
+import 'package:quote_app/utils/quotes_utils.dart';
 
 Widget quoteListView({required BuildContext context, required Size size}) {
   return SingleChildScrollView(

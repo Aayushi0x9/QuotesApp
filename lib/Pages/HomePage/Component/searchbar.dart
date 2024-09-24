@@ -3,6 +3,7 @@ import 'package:quote_app/headers.dart';
 
 Widget Searchbox() {
   return Container(
+    margin: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
     decoration: BoxDecoration(
       color: Colors.white, // Light background for better contrast
       borderRadius: BorderRadius.circular(15),
